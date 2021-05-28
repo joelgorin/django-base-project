@@ -38,11 +38,48 @@ or, you can download `.zip` file from the [Github repository](https://github.com
 
 ## Create and Setup Virtual Environment
 
+``` cmd
+[Windows]
+python -m venv env
+.\env\Scripts\activate
+
+[Linux]
+python3 -m venv env
+source ./env/bin/activate
+```
+
 ## Start Without Cloning
+
+``` cmd
+[Windows and Linux]
+pip install django
+django-admin startproject settings .
+```
 
 ### Settings
 
 ## Create Apps
+It's a good practice create an `apps` package, to do this, follow these steps:
+
+``` cmd
+[Windows]
+mkdir apps
+cd apps
+echo "" > __init__.py
+
+[Linux]
+mkdir apps
+cd apps
+touch __init__.py
+```
+
+To create an app, follow these steps:
+
+``` cmd
+[Windows and Linux]
+cd apps
+python ../manage.py startapp <app-name>
+```
 
 ## Migrate-Models
 
